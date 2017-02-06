@@ -1,0 +1,58 @@
+/* base styling goes here */
+* {                                   /* or should I put body {} here? or *? */
+	box-sizing: border-box;  /*если поставить, то текст будет "влезать со скроллом" при overflow: auto; */
+}
+
+h1 {
+	text-align: center;
+}
+
+.containter {
+	margin-left: 20px;
+	margin-right: 20px;
+	font-size: 0;
+	padding: 0;
+	overflow: hidden; /* or auto? */
+	width: 100%;
+	white-space: nowrap;
+	position: relative;
+}
+
+.divp {
+	float: left;
+	width: 33%;
+}
+
+p {
+	margin: 10px;
+	border: 1px solid black;
+	padding: 10px;
+	height: 260px;
+	overflow: auto;
+}
+
+/*** desktop version ***/
+@media (max-width: 992px) {
+	.divp {
+		width: 33%;
+		/*clear: right;*/
+	}
+}
+
+/*** tablet version ***/
+@media (min-width: 768px) and (max-width:991.99px) {
+	#div1, #div2 {
+		width: 50%;
+	}
+	#div3 {
+		width: 100%;
+	}
+}
+
+/*** mobile view ***/
+@media (max-width: 767.99px) {
+	.divp {
+		width: 100%;
+	}
+}
+
