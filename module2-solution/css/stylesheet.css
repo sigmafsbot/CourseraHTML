@@ -1,12 +1,46 @@
 /* base styling goes here */
-* {                                   /* or should I put body {} here? or *? */
-	box-sizing: border-box;  /*если поставить, то текст будет "влезать со скроллом" при overflow: auto; */
+* {                                   
+	box-sizing: border-box;
+	font-family: "Courier New", Courier, monospace;  /*если поставить, то текст будет "влезать со скроллом" при overflow: auto; */
 }
 
 h1 {
 	text-align: center;
+	text-shadow: 1px 1px 2px black, 0 0 1em red;
+	color: #ffcccc;
+	font-size: 175%;
 }
 
+
+h2 {
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+	position: relative;
+	float: right;
+	margin: -10px;
+	padding-left: 10px;
+	padding-right: 10px
+	/*font-size: 125%; */   /*ПОЧЕМУ это всё херит и сдвигает? UPD: похоже, из-за конфликта, если изменять в #chicken то всё ок; */
+}
+
+p {
+	margin-top: 22px;
+}
+
+#chicken {
+    background-color: #FFD9DA;
+	}
+#beef {
+	background-color: #8b0000;
+	color: white;
+}
+#sushi {
+	background-color: #ffd9b3;
+	/*position:absolute;
+	right: 55px;*/  /*это если мы хотим чтобы title секции был постоянно виден при скролле */
+}
+
+}
 .containter {
 	margin-left: 20px;
 	margin-right: 20px;
@@ -23,13 +57,18 @@ h1 {
 	width: 33%;
 }
 
-p {
+#div1, #div2, #div3 {
 	margin: 10px;
 	border: 1px solid black;
 	padding: 10px;
 	height: 260px;
 	overflow: auto;
 }
+
+#div1, #div2, #div3 {
+	background-color: #E8E8E8;
+}
+
 
 /*** desktop version ***/
 @media (max-width: 992px) {
@@ -41,10 +80,10 @@ p {
 
 /*** tablet version ***/
 @media (min-width: 768px) and (max-width:991.99px) {
-	#div1, #div2 {
+	.divp:nth-last-child(n+2) {
 		width: 50%;
 	}
-	#div3 {
+	.divp:nth-child(3) {
 		width: 100%;
 	}
 }
