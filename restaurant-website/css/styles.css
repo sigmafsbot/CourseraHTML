@@ -88,3 +88,44 @@ body {
 	clear:both;
 	margin-top: -30px;
 }
+
+/* END HEADER */
+
+/***** LARGE DEVICES ONLY *****/
+@media (min-width: 1200px) {
+
+}
+
+/***** MEDIUM DEVICES ONLY *****/
+@media (min-width: 992px) and (max-width: 1199px) {
+   #logo-img {
+   	background: url('../images/restaurant-logo_medium.png') no-repeat;
+   	width: 100px;
+   	height: 100px;
+   	margin: 5px 5px 5px 0;
+   }
+}
+
+/***** SMALL DEVICES ONLY *****/
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/***** EXTRA SMALL DEVICES ONLY *****/
+@media (max-width: 767px) {
+	.navbar-brand {
+		padding-top: 10px;
+		height: 80px;
+	}
+	.navbar-brand h1 {   /* Restaurant name */
+		padding-top: 10px;
+		font-size: 5vw;
+	}
+	.navbar-brand p {    /* Kosher cert */
+		font-size: .6em;
+		margin-top: 12px;
+	}
+	.navbar-brand p img {  /* Star-K */
+		height: 20px;
+	}
+}
